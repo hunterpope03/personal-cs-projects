@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.9rem;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator { /* setup outer container */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    width: 300px;
+    height: 400px;
+    gap: 8px;
+    padding: 15px;
+    background-color: rgba(162, 162, 162, 0.214);
+    border-radius: 20px;
+}
+
+.input { /* resize display on the frid */
+    grid-column: span 5;
+}
+
+#display {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    padding-left: 10px;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 15px;
+    border: none;
+}
+
+.row1, .row2, .row3, .row4, .row5 {
+    display: contents;
+}
+
+.delete, .clear { /* resize buttons on the grid */
+    grid-row: span 2;
+}
+
+.enter {
+    grid-column: span 5;
+}
+
+button { /* customize buttons */
+    border-radius: 30px;
+    border: none;
+    color: white;
+}
+
+button.value {
+    background-color: rgba(255, 255, 255, 0.176);
+    height: 90%;
+}
+
+button.operator {
+    background-color: rgba(255, 166, 0, 0.948);
+    font-size: 1rem;
+    height: 90%;
+}
+
+button.unary, button.decimal {
+    background-color: rgba(255, 255, 255, 0.525);
+    font-size: 1rem;
+    height: 90%;
+}
+
+button.delete {
+    background-color: rgb(55, 155, 255);
+}
+
+button.clear {
+    background-color: rgb(253, 66, 66);
+}
+
+button.enter {
+    background-color: rgb(35, 212, 79);
+}
+
+button.value:hover {
+    background-color: rgba(255, 255, 255, 0.29);
+}
+
+button.operator:hover {
+    background-color: rgb(252, 174, 30);
+
+}
+
+button.unary:hover, button.decimal:hover {
+    background-color: rgba(255, 255, 255, 0.706);
+}
+
+button.delete:hover {
+    background-color: rgb(94, 174, 254);
+}
+
+button.clear:hover {
+    background-color: rgb(253, 93, 93);
+}
+
+button.enter:hover {
+    background-color: rgb(58, 233, 101);
+}
+
+button:active {
+  box-shadow: 0 5px black;
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) { /* repsonsive display */
+    .calculator {
+        width: 250px;
+        height: 350px;
+    }
+    #display {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        width: 200px;
+        height: 300px;
+        padding: 8px;
+    }
+    #display {
+        font-size: 0.9rem;
+    }
+    button {
+        font-size: 0.8rem;
+    }
+}

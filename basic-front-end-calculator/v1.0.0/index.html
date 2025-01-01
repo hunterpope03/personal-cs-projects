@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Hunter Pope">
+        <meta name="description" content="HTML, CSS, JavaScript, jQeury">
+        <title>Basic Front-End Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div class="calculator">  <!--- outer container --> 
+            <div class="input"> <!--- each div is a row on the calculator -->
+                <input type="text" id="display" disabled> 
+            </div>
+            <div class="row1"> 
+                <button class="value" onclick="setValue('1')">1</button>
+                <button class="value" onclick="setValue('2')">2</button>
+                <button class="value" onclick="setValue('3')">3</button>
+                <button class="operator" onclick="setOperator('+')">+</button>
+                <button class="delete" onclick="del()">Del</button>
+            </div>
+            <div class="row2">
+                <button class="value" onclick="setValue('4')">4</button>
+                <button class="value" onclick="setValue('5')">5</button>
+                <button class="value" onclick="setValue('6')">6</button>
+                <button class="operator" onclick="setOperator('-')">-</button>
+            </div>
+            <div class="row3">
+                <button class="value" onclick="setValue('7')">7</button>
+                <button class="value" onclick="setValue('8')">8</button>
+                <button class="value" onclick="setValue('9')">9</button>
+                <button class="operator" onclick="setOperator('*')">*</button>
+                <button class="clear" onclick="clearAll()">Clear</button>
+            </div>
+            <div class="row4">
+                <button class="value" onclick="setValue('0')">0</button>
+                <button class="decimal" onclick="setDecimal()">.</button>
+                <button class="unary" onclick="setUnary()">±</button>
+                <button class="operator" onclick="setOperator('÷')">÷</button>
+            </div>
+            <div class="row5">
+                <button class="enter" onclick="calculate()">Enter</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
