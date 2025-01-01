@@ -1,3 +1,5 @@
+NOTE: To access this project's webpage, visit the Pages section of this repository. This webpage contains links to all of the projects in this repository. 
+
 This city weather forecast generator was created using HTML, CSS, & JavaScript. It utilizes Open Weather Map's free API subscription to fetch weather data and create pre-made widgets. These widgets provide a weekly overview and current details on the weather in a given city. It also implements Leaflet to add a dynamic map feature with various weather layer options. 
 
 The HTML for this project is fairly simple. I utilize many divisions for different items, feature buttons and drop-down menus, and include functions for the HTML to work with my JavaScript file. 
