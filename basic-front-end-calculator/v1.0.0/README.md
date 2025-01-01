@@ -1,4 +1,4 @@
-# Basic-Front-End-Calculator
+# Basic-Front-End-Calculator v1.0.0
 
 NOTE: To access this project's webpage, visit the Pages section of this repository. This webpage contains links to all of the projects in this repository. 
 
