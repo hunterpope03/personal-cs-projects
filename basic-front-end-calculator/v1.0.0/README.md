@@ -1,5 +1,7 @@
 # Basic-Front-End-Calculator
 
+NOTE: To access this project's webpage, visit the Pages section of this repository. This webpage contains links to all of the projects in this repository. 
+
 This basic front-end calculator was created using HTML, CSS, and JavaScript (including the jQuery library). It functions similarly to the pre-iOS 18 calculator, offering automatic calculations where certain expressions are instantly evaluated upon being entered. It supports basic arithmetic, unary, and decimal operations with a responsive user-interface. I utilized jQuery heavily to simplify DOM manipulation, creating a smooth-flowing experience for any user. 
 
 The HTML structure for this project is extremely simple. I follow a semantic structure, making divisions for each row of the calculator. 
