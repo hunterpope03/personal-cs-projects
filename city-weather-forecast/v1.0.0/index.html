@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Hunter Pope">
+        <meta name="description" content="HTML, CSS, JavaScript, API">
+        <title>City Weather Forecast</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div class="weather">
+            <div class="weatherStart">
+                <div class="heading"> <!-- heading text -->
+                    <h1>City Weather Forecast</h1>
+                    <h4>Enter a city to view a detailed weather forecast</h4>
+                </div>
+                <div class="tools">
+                    <div class="search"> <!-- search bar -->
+                        <input type="text" id="searchBar" placeholder="Enter a location">
+                        <button id="searchButton" onclick="searchLocation()">Search</button>
+                    </div>
+                    <div class="unit"> <!-- change units -->
+                        <select id="unitSelect" onchange="unitSelection()">
+                            <option id="unitImperial" value="imperial">Imperial (default)</option>
+                            <option id="unitMetric" value="metric">Metric</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="weatherData1">
+                <div class="widget1">
+                    <div class="widgetOverview" id="openweathermap-widget-11"></div> <!-- first widget -->
+                </div>
+            </div>
+            <div class="weatherData2">
+                <div class="widget2">
+                    <div class="widgetDetails" id="openweathermap-widget-15"></div> <!-- second widget -->
+                </div>
+                <div class="mapContainer">
+                    <div class="maps">
+                        <label for="mapSelect">Map Layer: </label>
+                        <select name="mapSelect" id="mapSelect" onchange="mapSelection()"> <!-- change map layer -->
+                            <option id="precipitation" value="precipitation_new">Precipitation</option>
+                            <option id="temp" value="temp_new">Temperature</option>
+                            <option id="clouds" value="clouds_new">Clouds</option>
+                            <option id="wind" value="wind_new">Wind</option>
+                            <option id="pressure" value="pressure_new">Pressure</option>
+                        </select>
+                    </div>
+                    <div class="map" id="map"></div> <!-- map -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
