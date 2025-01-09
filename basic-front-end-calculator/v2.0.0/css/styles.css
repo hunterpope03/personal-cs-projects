@@ -1,0 +1,217 @@
+/* #region reset styles */
+* {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+        font-size: 100%;
+        font-weight: normal;
+        line-height: normal;
+        text-align: center; 
+        text-decoration: none;
+        color: white; 
+        border: none;
+        outline: none;
+        overflow: hidden; 
+        white-space: normal; 
+    }
+/* #endregion reset styles */
+
+/* #region global styles */
+#title-text {
+        font-size: clamp(1.5rem, 5vw, 3rem); /* respoonsive font sizes */
+    }
+    
+#subtitle-text {
+        font-size: clamp(0.8rem, 2vw, 1.2rem); 
+}
+
+.paragraph-text {
+        font-size: clamp(0.5rem, 1vw, 0.85rem); 
+}
+/* #endregion global styles */
+
+/* #region layout styles */
+head {
+        display: none; 
+}
+
+body {
+        display: flex; 
+        flex-direction: column;
+        height: 100vh; 
+        width: 100vw; 
+        background-color: black; 
+}
+
+header {
+        display: flex; 
+        flex-direction: column; 
+        height: 20%; 
+        width: 100%; 
+        background-color: rgba(255, 255, 255, 0.05);
+        border-bottom: solid grey 2px;
+}
+
+#title-container {
+        display: flex; 
+        height: 40%; 
+        width: 100%; 
+}
+
+#subtitle-container {
+        display: flex; 
+        height: 30%; 
+        width: 100%; 
+}
+
+main {
+        display: flex; 
+        height: 65%; 
+        width: 100%; 
+}
+
+#calculator-container {
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr);  /* grid layout with five columns */
+        grid-template-rows: repeat(6, 1fr);  /* grid layout with six rows */
+        height: 80%; 
+        width: auto;  
+        padding: 1vw; 
+        gap: 0.5vw; 
+        background-color: rgb(48, 48, 48);
+        border-radius: 10px; 
+}
+    
+#calculator-display {
+        grid-column: span 5; /* set display to span all five columns */
+        width: 100%; 
+        height: 100%; 
+}
+    
+.calculator-row {
+        display: contents; 
+        
+}
+
+footer {
+        display: flex; 
+        height: 15%; 
+        width: 100%; 
+        background-color: rgba(255, 255, 255, 0.05);
+        border-top: solid grey 2px; 
+}
+
+.footer-article {
+        display: flex; 
+        height: 100%; 
+        width: 25%; 
+}
+
+#footer-connect {
+        display: flex; 
+        flex-direction: column; 
+        gap: 0.5vw;
+}
+/* #endregion layout styles */
+
+/* #region component styles */
+#display {
+        min-height: 100%; 
+        width: 100%; 
+        padding: 0.5vw 0.5vw 0.5vw 1rem; 
+        background-color: black;
+        text-align: left; 
+        border-radius: 10px; 
+}
+
+button {
+        min-height: 100%; 
+        width: 100%; 
+        padding: 0.5vw; 
+        color: white; 
+        border-radius: 10px; 
+}
+
+.value-button {
+        background-color: rgb(101, 101, 101);
+}
+
+.operator-button {
+        background-color: rgb(255, 166, 0);
+}
+
+#delete-button {
+        grid-row: span 2; /* set delete button to span two rows */
+        background-color: rgb(55, 155, 255);
+}
+
+#clear-button {
+        grid-row: span 2; /* set clear button to span two rows */
+        background-color: rgb(253, 66, 66);
+}
+
+#decimal-button, #unary-button {
+        background-color: rgb(151, 151, 151);
+}
+
+#enter-button {
+        grid-column: span 5; /* set enter button to span all five columns */
+        background-color: rgb(35, 212, 79);
+}
+
+a {
+        color: #0000EE;
+        font-weight: 600; 
+        text-decoration: underline;
+        cursor: pointer; 
+}
+
+a:visited {
+        color: purple;
+}
+/* #endregion component styles */
+
+/* #region state styles */
+button:hover {
+        filter: brightness(1.2); /* increase brightness slightly on hover */
+    }
+    
+button:active, button.active {
+        filter: brightness(0.8);  /* decrease brightness slightly on hover */
+        transform: scale(1.02); /* Slight enlargement */
+        transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* #endregion state styles */
+
+/* #region responsive styles */
+@media screen and (max-width: 768px) { /* edit calculator size behavior and stack footer on smaller devices */
+        #calculator-container {
+                width: 50%;
+                padding: 2vw;
+                gap: 2vw;
+        }
+        footer {
+                flex-direction: column; 
+        }
+        .footer-article {
+                height: 25%; 
+                width: 100%; 
+        }
+        #footer-connect {
+                flex-direction: row; 
+                gap: 3vw; 
+        }
+      }
+
+@media screen and (max-width: 480px) {
+        #calculator-container { /* edit calculator size behavior on even smaller devices */
+            width: 70%;
+            padding: 3vw;
+            gap: 3vw;
+        }
+    }
+/* #endregion responsive styles */

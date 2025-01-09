@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Hunter Pope">
+        <meta name="description" content="A simple responsive web calculator made using HTML, CSS, and JavaScript.">
+        <meta name="keywords" content="html, css, js, jquery, calculator">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic Front-End Calculator</title>
+        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <header> 
+            <article id="title-container">
+                <h1 id="title-text">Basic Front-End Calculator</h1>
+            </article>
+            <article id="subtitle-container">
+                <h3 id="subtitle-text">Made with HTML, CSS, JavaScript, and the jQuery library</h3>
+            </article>
+        </header>
+        <main>
+            <section id="calculator-container">
+                <section id="calculator-display">
+                    <input type="text" id="display" title="Calculator display" disabled> 
+                </section>
+                <section class="calculator-row">
+                    <button class="value-button" onclick="setValue('1')">1</button>
+                    <button class="value-button" onclick="setValue('2')">2</button>
+                    <button class="value-button" onclick="setValue('3')">3</button>
+                    <button class="operator-button" onclick="setOperator('+')">+</button>
+                    <button id="delete-button" onclick="del()">Del</button>
+                </section>
+                <section class="calculator-row">
+                    <button class="value-button" onclick="setValue('4')">4</button>
+                    <button class="value-button" onclick="setValue('5')">5</button>
+                    <button class="value-button" onclick="setValue('6')">6</button>
+                    <button class="operator-button" onclick="setOperator('-')">-</button>
+                </section>
+                <section class="calculator-row">
+                    <button class="value-button" onclick="setValue('7')">7</button>
+                    <button class="value-button" onclick="setValue('8')">8</button>
+                    <button class="value-button" onclick="setValue('9')">9</button>
+                    <button class="operator-button" onclick="setOperator('*')">*</button>
+                    <button id="clear-button" onclick="clearAll()">Clear</button>
+                </section>
+                <section class="calculator-row">
+                    <button class="value-button" onclick="setValue('0')">0</button>
+                    <button id="decimal-button" onclick="setDecimal()">.</button>
+                    <button id="unary-button" onclick="setUnary()">±</button>
+                    <button class="operator-button" onclick="setOperator('÷')">÷</button>
+                </section>
+                <section class="calculator-row">
+                    <button id="enter-button" onclick="calculate()">Enter</button>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <article class="footer-article">
+                <p class="paragraph-text">© 2025 by Hunter Pope</p>
+            </article>
+            <article class="footer-article">
+                <p class="paragraph-text">View the <a class="paragraph-text" href="">source code</a></p>
+            </article>
+            <article class="footer-article">
+                <p class="paragraph-text">View the <a class="paragraph-text" href="https://jquery.com">jQuery Library</a>
+            </article>
+            <article class="footer-article" id="footer-connect">
+                <a class="paragraph-text" href="https://www.linkedin.com/in/hunter-pope05">LinkedIn</a>
+                <a class="paragraph-text" href="https://unomaha.joinhandshake.com/profiles/50221992">Handshake</a>
+            </article>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>
