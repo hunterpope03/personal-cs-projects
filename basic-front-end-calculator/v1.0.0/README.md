@@ -1,4 +1,4 @@
-# Basic-Front-End-Calculator v1.0.0
+# Basic Front-End Calculator v1.0.0
 
 NOTE: To access this project's webpage, visit this link:  https://hunterpope03.github.io/personal-cs-projects/basic-front-end-calculator/v1.0.0/
 
